@@ -1,0 +1,345 @@
+{
+  "kidney": {
+    "disease": "Chronic Kidney Disease",
+    "best_model": "Random Forest",
+    "best_params": {
+      "model__max_depth": "4",
+      "model__min_samples_leaf": "1",
+      "model__n_estimators": "200"
+    },
+    "rows": 400,
+    "features": 24,
+    "positive_rate_pct": 62.5,
+    "nested_cv_metrics_of_best": {
+      "accuracy": 0.9925,
+      "precision": 0.992,
+      "recall": 0.996,
+      "f1": 0.994,
+      "roc_auc": 0.9999,
+      "confusion_matrix": {
+        "true_negative": 148,
+        "false_positive": 2,
+        "false_negative": 1,
+        "true_positive": 249
+      },
+      "cv_auc_mean": 0.9997,
+      "cv_auc_std": 0.0005,
+      "train_seconds": 21.3
+    },
+    "all_models": {
+      "Logistic Regression": {
+        "accuracy": 0.98,
+        "precision": 1.0,
+        "recall": 0.968,
+        "f1": 0.9837,
+        "roc_auc": 0.9999,
+        "confusion_matrix": {
+          "true_negative": 150,
+          "false_positive": 0,
+          "false_negative": 8,
+          "true_positive": 242
+        },
+        "cv_auc_mean": 0.9999,
+        "cv_auc_std": 0.0003,
+        "train_seconds": 7.1
+      },
+      "Random Forest": {
+        "accuracy": 0.9925,
+        "precision": 0.992,
+        "recall": 0.996,
+        "f1": 0.994,
+        "roc_auc": 0.9999,
+        "confusion_matrix": {
+          "true_negative": 148,
+          "false_positive": 2,
+          "false_negative": 1,
+          "true_positive": 249
+        },
+        "cv_auc_mean": 0.9997,
+        "cv_auc_std": 0.0005,
+        "train_seconds": 21.3
+      },
+      "Gradient Boosting": {
+        "accuracy": 0.9875,
+        "precision": 0.992,
+        "recall": 0.988,
+        "f1": 0.99,
+        "roc_auc": 0.9994,
+        "confusion_matrix": {
+          "true_negative": 148,
+          "false_positive": 2,
+          "false_negative": 3,
+          "true_positive": 247
+        },
+        "cv_auc_mean": 0.9993,
+        "cv_auc_std": 0.001,
+        "train_seconds": 6.5
+      }
+    },
+    "grids_searched": {
+      "Logistic Regression": {
+        "model__C": [
+          "0.01",
+          "0.1",
+          "1",
+          "10"
+        ]
+      },
+      "Random Forest": {
+        "model__n_estimators": [
+          "200"
+        ],
+        "model__max_depth": [
+          "4",
+          "None"
+        ],
+        "model__min_samples_leaf": [
+          "1",
+          "3"
+        ]
+      },
+      "Gradient Boosting": {
+        "model__n_estimators": [
+          "100",
+          "200"
+        ],
+        "model__learning_rate": [
+          "0.05",
+          "0.1"
+        ],
+        "model__max_depth": [
+          "2",
+          "3"
+        ]
+      }
+    }
+  },
+  "liver": {
+    "disease": "Liver Disease",
+    "best_model": "Logistic Regression",
+    "best_params": {
+      "model__C": "1"
+    },
+    "rows": 570,
+    "features": 10,
+    "positive_rate_pct": 71.2,
+    "nested_cv_metrics_of_best": {
+      "accuracy": 0.6579,
+      "precision": 0.8809,
+      "recall": 0.601,
+      "f1": 0.7145,
+      "roc_auc": 0.7524,
+      "confusion_matrix": {
+        "true_negative": 131,
+        "false_positive": 33,
+        "false_negative": 162,
+        "true_positive": 244
+      },
+      "cv_auc_mean": 0.7574,
+      "cv_auc_std": 0.0525,
+      "train_seconds": 1.8
+    },
+    "all_models": {
+      "Logistic Regression": {
+        "accuracy": 0.6579,
+        "precision": 0.8809,
+        "recall": 0.601,
+        "f1": 0.7145,
+        "roc_auc": 0.7524,
+        "confusion_matrix": {
+          "true_negative": 131,
+          "false_positive": 33,
+          "false_negative": 162,
+          "true_positive": 244
+        },
+        "cv_auc_mean": 0.7574,
+        "cv_auc_std": 0.0525,
+        "train_seconds": 1.8
+      },
+      "Random Forest": {
+        "accuracy": 0.6737,
+        "precision": 0.8548,
+        "recall": 0.6527,
+        "f1": 0.7402,
+        "roc_auc": 0.7448,
+        "confusion_matrix": {
+          "true_negative": 119,
+          "false_positive": 45,
+          "false_negative": 141,
+          "true_positive": 265
+        },
+        "cv_auc_mean": 0.7501,
+        "cv_auc_std": 0.0414,
+        "train_seconds": 13.7
+      },
+      "Gradient Boosting": {
+        "accuracy": 0.6877,
+        "precision": 0.7346,
+        "recall": 0.8793,
+        "f1": 0.8004,
+        "roc_auc": 0.7309,
+        "confusion_matrix": {
+          "true_negative": 35,
+          "false_positive": 129,
+          "false_negative": 49,
+          "true_positive": 357
+        },
+        "cv_auc_mean": 0.7324,
+        "cv_auc_std": 0.0364,
+        "train_seconds": 4.5
+      }
+    },
+    "grids_searched": {
+      "Logistic Regression": {
+        "model__C": [
+          "0.01",
+          "0.1",
+          "1",
+          "10"
+        ]
+      },
+      "Random Forest": {
+        "model__n_estimators": [
+          "200"
+        ],
+        "model__max_depth": [
+          "4",
+          "None"
+        ],
+        "model__min_samples_leaf": [
+          "1",
+          "3"
+        ]
+      },
+      "Gradient Boosting": {
+        "model__n_estimators": [
+          "100",
+          "200"
+        ],
+        "model__learning_rate": [
+          "0.05",
+          "0.1"
+        ],
+        "model__max_depth": [
+          "2",
+          "3"
+        ]
+      }
+    }
+  },
+  "parkinsons": {
+    "disease": "Parkinson's Disease",
+    "best_model": "Logistic Regression",
+    "best_params": {
+      "model__C": "0.01"
+    },
+    "rows": 195,
+    "features": 22,
+    "positive_rate_pct": 75.4,
+    "nested_cv_metrics_of_best": {
+      "accuracy": 0.7487,
+      "precision": 0.8889,
+      "recall": 0.7619,
+      "f1": 0.8205,
+      "roc_auc": 0.844,
+      "confusion_matrix": {
+        "true_negative": 34,
+        "false_positive": 14,
+        "false_negative": 35,
+        "true_positive": 112
+      },
+      "cv_auc_mean": 0.848,
+      "cv_auc_std": 0.113,
+      "train_seconds": 1.9
+    },
+    "all_models": {
+      "Logistic Regression": {
+        "accuracy": 0.7487,
+        "precision": 0.8889,
+        "recall": 0.7619,
+        "f1": 0.8205,
+        "roc_auc": 0.844,
+        "confusion_matrix": {
+          "true_negative": 34,
+          "false_positive": 14,
+          "false_negative": 35,
+          "true_positive": 112
+        },
+        "cv_auc_mean": 0.848,
+        "cv_auc_std": 0.113,
+        "train_seconds": 1.9
+      },
+      "Random Forest": {
+        "accuracy": 0.7436,
+        "precision": 0.805,
+        "recall": 0.8707,
+        "f1": 0.8366,
+        "roc_auc": 0.7842,
+        "confusion_matrix": {
+          "true_negative": 17,
+          "false_positive": 31,
+          "false_negative": 19,
+          "true_positive": 128
+        },
+        "cv_auc_mean": 0.7911,
+        "cv_auc_std": 0.0432,
+        "train_seconds": 15.6
+      },
+      "Gradient Boosting": {
+        "accuracy": 0.7744,
+        "precision": 0.8047,
+        "recall": 0.9252,
+        "f1": 0.8608,
+        "roc_auc": 0.7382,
+        "confusion_matrix": {
+          "true_negative": 15,
+          "false_positive": 33,
+          "false_negative": 11,
+          "true_positive": 136
+        },
+        "cv_auc_mean": 0.7147,
+        "cv_auc_std": 0.1397,
+        "train_seconds": 4.1
+      }
+    },
+    "random_split_auc_leaky": 0.8853,
+    "random_split_accuracy_leaky": 0.7641,
+    "grids_searched": {
+      "Logistic Regression": {
+        "model__C": [
+          "0.01",
+          "0.1",
+          "1",
+          "10"
+        ]
+      },
+      "Random Forest": {
+        "model__n_estimators": [
+          "200"
+        ],
+        "model__max_depth": [
+          "4",
+          "None"
+        ],
+        "model__min_samples_leaf": [
+          "1",
+          "3"
+        ]
+      },
+      "Gradient Boosting": {
+        "model__n_estimators": [
+          "100",
+          "200"
+        ],
+        "model__learning_rate": [
+          "0.05",
+          "0.1"
+        ],
+        "model__max_depth": [
+          "2",
+          "3"
+        ]
+      }
+    }
+  }
+}
